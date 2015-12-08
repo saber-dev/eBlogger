@@ -1,0 +1,54 @@
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
+
+
+.ic {
+	width: 250px;
+	margin: 0 auto;
+	top: 50%;
+	margin-top: -302px;
+	position: absolute;
+	left: 50%;
+	margin-left: -125px;
+}
+
+.flat {
+  background-image:url("https://lh5.googleusercontent.com/-nyTv-FiKmKY/U5GZmymo2qI/AAAAAAAABks/FKsoEvgnKdA/w1920-h1080/vVsVx5p.png");
+}
+
+#img{
+    top: 50%;
+    left: 50%;
+    /*position:absolute;*/
+    background:url("https://i.ytimg.com/vi/5AgLOeCLtYM/maxresdefault.jpg") center no-repeat;
+		background-size: cover;
+    height: 12em;
+		width: 12em;
+		border-radius: 50%;
+		margin-left: 45px;
+		/*border: 1px solid #ebebeb;*/
+		box-shadow: 0 4px 6px 1px rgba(50, 50, 50, 0.14);
+}
