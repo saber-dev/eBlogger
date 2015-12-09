@@ -10,7 +10,6 @@ eComm.controller 'homeCtrl', ($scope, $http, $q) ->
             method : 'GET'
             url : url
 
-
     promise_fb = data '../api/fbApi.json'
     promise_twt = data '../api/twitterApi.json'
     article = data '../api/fakeArticle.json'
@@ -20,6 +19,3 @@ eComm.controller 'homeCtrl', ($scope, $http, $q) ->
         $scope.twt = data[0].data.length
         $scope.fb = data[1].data.length
         $scope.article = data[2].data
-
-
-
