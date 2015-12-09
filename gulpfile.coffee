@@ -14,6 +14,7 @@ coffeelint = require 'gulp-coffeelint'
 css_minify = require 'gulp-minify-css'
 ngAnnotate = require 'gulp-ng-annotate'
 html_minify = require 'gulp-minify-html'
+sass = require 'gulp-sass'
 
 jsFilter = filter "**/*.js", {restore: true}
 cssFilter = filter "**/*.css", {restore: true}
@@ -55,8 +56,9 @@ gulp.task 'js', ->
   .pipe concat "#{name}-animation.js"
   .pipe gulp.dest "#{dest}/js"
 
-gulp.task 'css', ->
-  gulp.src "#{src}/css/*.css"
+gulp.task 'sassToCss', ->
+  gulp.src ["#{src}/css/*.scss", "#{src}/css/*.sass"]
+  .pipe(sass().on('error', sass.logError))
   .pipe changed "#{dest}/css}"
   .pipe concat "#{name}-styles.css"
   .pipe gulp.dest "#{dest}/css"
@@ -78,5 +80,5 @@ gulp.task 'img_copy', ->
   .pipe gulp.dest "#{dest}/img/"
 
 
-gulp.task 'default', ['clean', 'bower', 'css', 'coffee', 'js', 'copy'], ->
+gulp.task 'default', ['clean', 'bower', 'sassToCss', 'coffee', 'js', 'copy'], ->
   console.log "done !"

@@ -9,9 +9,6 @@
   "moduleType": [],
   "homepage": "",
   "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
     "test",
     "tests"
   ],
@@ -34,5 +31,8 @@
   "resolutions": {
     "angular": "~1.4.7",
     "angular-material": "~0.11.4"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.6"
   }
 }
