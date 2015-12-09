@@ -1,3 +1,3 @@
 eComm
-.controller "loginCtrl", ($scope) ->
+.controller "loginCtrl", ($scope, $http) ->
     console.log "hello !"
