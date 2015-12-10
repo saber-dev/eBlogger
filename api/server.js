@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 var port = process.env.PORT || 3000;
 var router = express.Router();
 
-// require('./app/routes/userRoute')(router, connection);
+require('./app/routes/userRoute')(router, connection);
 require('./app/routes/articleRoute')(router,connection);
 require('./app/routes/produitRoute')(router, connection);
 

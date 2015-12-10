@@ -37,8 +37,4 @@ module.exports = function(router, connection){
                   res.json(data);
             });
         })
-        //  update a faire
-        // .post(function(req, res) {
-        //
-        // })
 };
