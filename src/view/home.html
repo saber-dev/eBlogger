@@ -10,10 +10,7 @@
     <div class="row">
         <div class="col-md-13">
             <md-card>
-                <md-card-title style="min-height:307px; background-color:#ffffe5">
-                    <md-card-title-text>
-                      Actity Sites
-                    </md-card-title-text>
+                <md-card-title class="background-animate" style="min-height:307px; background-color:#ffffe5;">
                 </md-card-title>
             </md-card>
         </div>
@@ -21,28 +18,31 @@
     <!--1st section-->
     <div class="row">
         <!-- <div > -->
-            <md-card class="col-md-3" style="min-height:75px; background-color:#00bcd4 !important; margin-right: 130px;">
-                <md-card-title>
-                    <md-card-title-text>
-                        Facebook : {{fb}}
+            <md-card md-ink-ripple class="col-md-3" style="min-height:75px; background-color:#3a5795 !important; margin-right: 130px;">
+                <md-card-title layout-padding="">
+                    <md-card-title-text class="fontFacebook">
+                        Facebook stat :
                     </md-card-title-text>
+                    <p style="color:white" class="md-subhead">Non disponible dans cette version</p>
                 </md-card-title>
             </md-card>
         <!-- </div>
         <div > -->
-            <md-card class="col-md-3" style="min-height:75px; background-color:#8bc34a !important; margin-right: 130px;">
-                <md-card-title>
-                    <md-card-title-text>
-                        Twitter : {{twt}}
+            <md-card class="col-md-3" md-ink-ripple style="min-height:75px; background-color:#55acee !important; margin-right: 130px;">
+                <md-card-title layout-padding="">
+                    <md-card-title-text class="fontTwitter">
+                        Twitter Stat :
                     </md-card-title-text>
+                    <p style="color:white" class="md-subhead"> Non disponible dans cette version</p>
                 </md-card-title>
             </md-card>
 
-            <md-card class="col-md-3" style="min-height:75px; background-color:#2b82ad !important;">
-                <md-card-title>
-                    <md-card-title-text>
-                        Instagram : {{insta}}
+            <md-card md-ink-ripple class="col-md-3" style="min-height:75px; background-color:#2b82ad !important;">
+                <md-card-title layout-padding="">
+                    <md-card-title-text class="fontInstagram">
+                        Instagram Stat:
                     </md-card-title-text>
+                    <p style="color:white" class="md-subhead">Non disponible dans cette version</p>
                 </md-card-title>
             </md-card>
         <!-- </div> -->
@@ -59,13 +59,30 @@
             </md-card>
         <!-- </div> -->
         <!-- <div class="col-md-4"> -->
-            <md-card class="col-md-3 col-sm-6" style="min-height:380px; background-color:#cddc39 !important; margin-right: 32px;">
+            <md-card class="col-md-3 col-sm-6" style="min-height:380px; margin-right: 32px; padding-right: 0px; padding-left: 0px;">
                 <md-card-title>
-                    <md-card-title-text>
-                        Best Selling
+                    <img ng-src="{{bestSell[0].img}}" class="md-card-image" alt="test" style="height: 148px;">
+                    <md-card-title-text  style="color:white">
+                        <h3 layout-padding="" class="first md-display-1">#1</h3>
+                        <p  layout-padding="" class="firstName md-subhead">{{bestSell[0].name}}</p>
+                        <p  layout-padding="" class="firstPrice md-subhead">{{bestSell[0].price}} Euro</p>
                     </md-card-title-text>
+                    <md-list>
+                      <md-list-item class="md-2-line" ng-repeat="(key, item) in bestSell" md-ink-ripple ng-if="key != 0">
+                        <img ng-src="{{item.img}}" class="faceComment" alt="{{item.user}}">
+                        <div class="md-list-item-text">
+                          <h3 class="md-title">{{item.name}}</h3>
+                          <h4 class="md-subhead" style="color:#888888">{{item.price}} Euro</h4>
+                        </div>
+                        <md-divider md-inset="" ng-if="!$last"></md-divider>
+                      </md-list-item>
+                    </md-list>
                 </md-card-title>
             </md-card>
+
+            <!-- <div layout="row">
+
+            </div> -->
         <!-- </div> -->
         <!-- <div class="col-md-4"> -->
             <md-card class="col-md-5 col-sm-6" style="min-height:380px; background-color:#BBDEFB">

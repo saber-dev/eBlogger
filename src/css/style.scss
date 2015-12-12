@@ -52,3 +52,65 @@
 		/*border: 1px solid #ebebeb;*/
 		box-shadow: 0 4px 6px 1px rgba(50, 50, 50, 0.14);
 }
+
+.faceComment {
+  border-radius: 40px;
+  border: 1px solid #ddd;
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+}
+
+@font-face {
+    font-family: 'twitter'; /*a name to be used later*/
+    src: url('/font/twitter.ttf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'facebook'; /*a name to be used later*/
+  src: url('/font/facebook.ttf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'instagram'; /*a name to be used later*/
+  src: url('/font/instagram.ttf'); /*URL to font*/
+}
+
+.fontFacebook {
+  color: white;
+  font: 500 20px/20px 'facebook', sans-serif;
+  margin: 16px 0 9px 0;
+}
+
+.fontInstagram {
+  color: white;
+  font: 500 20px/20px 'instagram', sans-serif;
+  margin: 16px 0 9px 0;
+}
+
+.fontTwitter {
+  color: white;
+  font: 500 20px/20px 'twitter', sans-serif;
+  margin: 16px 0 9px 0;
+}
+
+.background-animate {
+  background-image: url("https://lh5.googleusercontent.com/XXyGSVJrEYkLb4SjYkhtUBYt43YzRN9c2MRuTOwdlaDYJNqN9a5dBlSD4zFNsO1kHA1cLbKDGDHf9GsmYrj6QN40d4lhhJtrRaRNrpeLfs1-tHLP_SmxcNXN2GfRcFPxcA");
+  background-size: cover;
+  background-position: center;
+}
+
+.first {
+  position: absolute;
+  top: 50px;
+}
+
+.firstName {
+  position: absolute;
+  top: 100px;
+}
+
+.firstPrice {
+  position: absolute;
+  top: 115px;
+}

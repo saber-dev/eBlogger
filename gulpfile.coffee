@@ -74,6 +74,8 @@ gulp.task 'copy',['bower'], ->
   .pipe gulp.dest "#{dest}"
   gulp.src "bower_components/alasql/dist/alasql.min.js"
   .pipe gulp.dest "#{dest}/js"
+  gulp.src "#{src}/font/*"
+  .pipe gulp.dest "#{dest}/font"
 
 gulp.task 'img_copy', ->
   gulp.src "#{src}/img/**/*"
