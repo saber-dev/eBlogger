@@ -1,0 +1,34 @@
+<form name="addForm" flex="" style="min-width:800px">
+    <md-content flex="" layout-padding="">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Img : entrer le lien de l'image</label>
+                <input ng-disabled="true" ng-model="addArticle.imh">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Nom :</label>
+              <input ng-disabled="true" ng-model="addArticle.name">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Description :</label>
+                <input ng-disabled="true" ng-model="addArticle.descrip">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Prix :</label>
+                <input ng-disabled="true" ng-model="addArticle.prix">
+            </md-input-container>
+
+          Image de l'article : (rentrer l'url de l'image)
+          <input type="text" name="name" value="">
+          Nom:
+          <input type="text" name="name" value=""> <br>
+          Description
+          <input type="text" name="name" value=""> <br>
+          Prix
+          <input type="text" name="name" value=""> <br>
+
+          <div class="datepickerdemoBasicUsage" ng-show="informationData.isOther">
+            <md-datepicker ng-model="informationData.customDAte" md-placeholder="Enter date"></md-datepicker>
+          </div>
+      <md-button ng-disabled="!informationData.isOneDay && !informationData.isOneWeek && !informationData.isOther" ng-click="commit(informationData)" class="md-primary">Ajouter</md-button>
+    </md-content>
+</form>
