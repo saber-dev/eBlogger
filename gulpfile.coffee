@@ -82,5 +82,5 @@ gulp.task 'img_copy', ->
   .pipe gulp.dest "#{dest}/img/"
 
 
-gulp.task 'default', ['clean', 'bower', 'sassToCss', 'coffee', 'js', 'copy'], ->
+gulp.task 'default', ['clean', 'bower', 'sassToCss', 'coffee', 'js', 'copy', 'img_copy' ], ->
   console.log "done !"

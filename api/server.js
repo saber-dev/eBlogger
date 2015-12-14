@@ -35,6 +35,7 @@ var router = express.Router();
 require('./app/routes/userRoute')(router, connection);
 require('./app/routes/articleRoute')(router,connection);
 require('./app/routes/produitRoute')(router, connection);
+require('./app/routes/loginRoute')(router, connection);
 
 app.use('/api', router);
 app.listen(port);

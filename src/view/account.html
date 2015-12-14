@@ -1,0 +1,83 @@
+<div ng-controller="navBarCtrl">
+  <ng-include src="'templates/navBarPartial.html'"></ng-include>
+</div>
+
+<div class="container">
+  <!-- Mes informations personelles -->
+  <div class="row">
+      <h3 class="md-display-1">Mes information personnelles</h3>
+      <span class="d-subhead">vous trouverez dans cette partie vos informations personnelles relatives à votre compte.</span>
+      <div class="col-md-13">
+          <md-card layout-padding="">
+              <!-- <md-card-title class="background-animate" style="min-height:307px; background-color:#ffffe5;">
+              </md-card-title> -->
+              <md-input-container class="md-block" flex-gt-sm>
+                <label>Nom</label>
+                <input ng-disabled="true" ng-model="userAccount.name">
+              </md-input-container>
+              <md-input-container class="md-block" flex-gt-sm>
+                <label>Prénom</label>
+                <input ng-disabled="true" ng-model="userAccount.firstname">
+              </md-input-container>
+              <md-input-container class="md-block" flex-gt-sm>
+                <label>Adresse E-mail</label>
+                <input ng-model="userAccount.email">
+              </md-input-container>
+              <md-input-container class="md-block" flex-gt-sm>
+                <label>Adresse</label>
+                <input ng-model="userAccount.address">
+              </md-input-container>
+              <md-input-container class="md-block" flex-gt-sm>
+                <label>Ville</label>
+                <input ng-model="userAccount.city">
+              </md-input-container>
+              <md-input-container class="md-block" flex-gt-sm>
+                <label>Code Postal</label>
+                <input ng-model="userAccount.postalCode">
+              </md-input-container>
+              <md-input-container class="md-block" flex-gt-sm>
+                <label>Image (pour le moment seulement via Url, upload d'image non disponible)</label>
+                <input ng-model="userAccount.imgUrl">
+              </md-input-container>
+          </md-card>
+      </div>
+  </div>
+  <div class="row" layout-wrap>
+    <!-- <div > -->
+    <div class="row">
+      <h3 class="md-display-1">Mes themes</h3>
+      <span class="md-subhead">vous trouverez dans cette partie vos themes, le theme par défaut est le theme matérial</span>
+    </div>
+        <md-card class="col-md-4"style="width:349px; height: 251px;" ng-repeat="item in testItem">
+              <img ng-src="{{item.img}}" class="md-card-image" alt="test">
+              <md-card-title>
+                <md-card-title-text>
+                  <span layout-padding="" class="md-headline titlePost">{{item.title}}</span>
+                </md-card-title-text>
+              </md-card-title>
+              <div flex="">
+                <md-card-actions layout="row" layout-align="start center">
+                  <md-checkbox ng-model="userAccount.useMaterial" aria-label="{{item.title}}">
+                    Utiliser {{item.title}}
+                  </md-checkbox>
+                </md-card-actions>
+              </div>
+          </md-card>
+      <!-- </div> -->
+    </div>
+    <div class="row">
+      <h3 class="md-display-1">Suprimmer mon compte</h3>
+      <span class="d-subhead">Attention ! appuyer sur le boutton uniquement si vous voulez mettre fin à votre compte</span>
+      <div class="row">
+        <md-button class="md-raised md-warn" ng-click="delAccount(id)">Supprimer mon compte</md-button>
+      </div>
+    </div>
+    <div class="row">
+      <h3 class="md-display-1">Enregistrer les modifications</h3>
+      <span class="d-subhead">Cliquer sur le boutton "enregistrer" pour mettre à jour vos informations</span>
+      <div class="row">
+        <md-button class="md-primary" ng-click="save(userAccount, userAccount.id)" >Enregistrer</md-button>
+      </div>
+    </div>
+
+  </div>
