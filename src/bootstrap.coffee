@@ -26,6 +26,9 @@ eComm
       .when '/account',
         templateUrl : 'templates/account.html',
         controller:   'accountCtrl'
+      .when '/sells',
+        templateUrl:  'templates/sells.html'
+        controller:   'sellsCtrl'
       .otherwise {redirectTo : '/login'}
 .run ($rootScope, AuthentificationService, $location, $cookies) ->
   if not AuthentificationService.checkCookies()

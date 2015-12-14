@@ -38,17 +38,11 @@ eComm
     $scope.testItem = [{
         id: 1
         title: "Material"
-        text:  "test text 1"
         img: "img/material.png"
-        comment: "10"
-        type: "Téléphone"
-        color: "#e91e63"
+        link: "userAccount.getMaterial"
     },{
         id: 2
         title: "Music"
-        text:  "test text 2"
         img: "img/music.png"
-        comment: "7"
-        type: "livre"
-        color: "#9c27b0"
+        link: "userAccount.getMusic"
     }]

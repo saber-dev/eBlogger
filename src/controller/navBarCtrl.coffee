@@ -20,8 +20,8 @@ eComm
             goHome()
         if name == "deconnexion"
             logout()
-        if name == "Mes emprunts"
-            lend()
+        if name == "Mes ventes"
+            goToSells()
         if name == "Parametres de compte"
             checkAccount()
         if name == "Les Demandes"
@@ -53,6 +53,9 @@ eComm
         id: 4
       }]
 
+    goToSells = () ->
+        console.log "toto sells"
+        $location.path '/sells'
     goHome = () ->
         $location.path '/home'
     checkAccount = () ->

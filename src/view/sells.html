@@ -1,0 +1,32 @@
+<div ng-controller="navBarCtrl">
+  <ng-include src="'templates/navBarPartial.html'"></ng-include>
+</div>
+
+<div class="container">
+  <div class="row" layout-wrap>
+    <!-- <div > -->
+    <div class="row">
+      <h3 class="md-display-1">Mes Ventes</h3>
+      <span class="md-subhead">Vous trouverez ici vos ventes</span>
+    </div>
+        <md-card class="col-md-4"style="width:349px; height: 300px;" ng-repeat="item in testItem">
+              <img ng-src="{{item.img}}" class="md-card-image" alt="test">
+              <md-card-title>
+                <md-card-title-text>
+                  <span layout-padding="" class="md-headline titlePost">{{item.title}}</span>
+                </md-card-title-text>
+              </md-card-title>
+              <div flex="">
+                <md-list-item flex="">
+                <span flex=""></span>
+                    <md-card-actions layout="row" layout-align="start center">
+                      <md-button ng-click="delete(item.id)" style="background-color:#EF5350" class="md-fab md-primary" aria-label="Show item">
+                        <md-icon md-svg-src="img/icons/delete.svg"></md-icon>
+                      </md-button>
+                    </md-card-actions>
+                </md-list-item>
+              </div>
+          </md-card>
+      <!-- </div> -->
+  </div>
+</div>
