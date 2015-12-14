@@ -5,6 +5,17 @@ eComm.controller 'homeCtrl', ($scope, $http, $q, AuthentificationService, $locat
 
     console.log AuthentificationService.checkCookies()
 
+    $scope.getInfo = ($event, data) ->
+        $scope.informationData = data
+        console.log data
+        parent = angular.element document.body
+        $mdDialog.show
+            parent: parent
+            targetEvent: $event
+            templateUrl: 'templates/addArticle.html'
+            scope:       $scope
+            preserveScope: true
+
     $scope.bestSell = [{
       name:  "samsung galaxy s6"
       price: "500"
